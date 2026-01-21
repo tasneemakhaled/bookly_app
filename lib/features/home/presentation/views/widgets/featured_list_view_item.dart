@@ -7,7 +7,7 @@ class FeaturedListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 200,
-      width: 150,
+      width: 120,
       child: Image(image:AssetImage('assets/images/test_image.png') ));
   }
 }
