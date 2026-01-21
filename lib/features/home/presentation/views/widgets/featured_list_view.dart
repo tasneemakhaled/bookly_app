@@ -6,10 +6,13 @@ class FeaturedListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemBuilder: (context,index){
-      return FeaturedListViewItem();
-    });
+    return SizedBox(
+      height: 200,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context,index){
+        return FeaturedListViewItem();
+      }),
+    );
   }
 }
