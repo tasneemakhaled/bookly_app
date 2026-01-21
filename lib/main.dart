@@ -20,3 +20,8 @@ class BooklyApp extends StatelessWidget {
     // return GetMaterialApp(home: SplashView());
   }
 }
+
+
+
+
+// use get package (getx) for navigation
