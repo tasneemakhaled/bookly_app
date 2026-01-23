@@ -19,7 +19,7 @@ class HomeViewBody extends StatelessWidget {
           FeaturedListView(),
           Text('Best Seller',style: Styles.textStyle18,),])) ,
       
-         SliverToBoxAdapter(child: BestSellerListView()),
+         SliverFillRemaining(child: BestSellerListView()),
        ])
     );
   }
