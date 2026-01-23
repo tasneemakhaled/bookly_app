@@ -10,7 +10,7 @@ class BestSellerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-
+    
       children: [
         SizedBox(
           height: 200,

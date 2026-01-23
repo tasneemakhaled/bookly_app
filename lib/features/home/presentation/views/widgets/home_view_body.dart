@@ -12,15 +12,15 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: Column(
+      child:CustomScrollView(slivers:[SliverToBoxAdapter(child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomAppBar(),
           FeaturedListView(),
-          Text('Best Seller',style: Styles.textStyle18,),
-          BestSellerItem(),
-        ],
-      ),
+          Text('Best Seller',style: Styles.textStyle18,),])) ,
+      
+         SliverToBoxAdapter(child: BestSellerListView()),
+       ])
     );
   }
 }
