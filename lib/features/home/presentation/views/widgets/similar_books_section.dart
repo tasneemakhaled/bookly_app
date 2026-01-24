@@ -10,9 +10,9 @@ class SimilarBooksSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Text('You can also like',style: Styles.textStyle18,),
-              
-            LikedBooksListView(),
+        Text('You can also like', style: Styles.textStyle18),
+
+        LikedBooksListView(),
       ],
     );
   }

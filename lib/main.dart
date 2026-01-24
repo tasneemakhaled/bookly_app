@@ -15,9 +15,12 @@ class BooklyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig:AppRouter.router,
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: primaryColor,textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme)),
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: primaryColor,
+        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+      ),
       // home: SplashView(),
     );
     // return GetMaterialApp(home: SplashView());
@@ -27,6 +30,5 @@ class BooklyApp extends StatelessWidget {
 // final router=GoRouter(routes: [
 // GoRoute(path: '/',builder:(context, state) => const SplashView(),)
 // ]);
-
 
 // use get package (getx) for navigation

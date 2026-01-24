@@ -11,24 +11,27 @@ class BooksDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     var width=MediaQuery.of(context).size.width;
+    var width = MediaQuery.of(context).size.width;
     return Column(
       children: [
-       
-         Padding(
-           padding: EdgeInsets.symmetric(horizontal: width*.17),
-           child: CustomBookImage(),
-         ),
-          Text('''The Jungle Book''',style: Styles.textStyle30.copyWith( fontFamily: kGtSectraFine,),maxLines: 2,),
-          SizedBox(height: 7,),
-          Opacity(
-            opacity: .7,
-            child: Text('Rodyard Kipling',style:Styles.textStyle18)), 
-            SizedBox(height: 10,) ,   
-             BookRating(mainAxisAlignment: MainAxisAlignment.center,),
-             SizedBox(height: 10,) ,   
-            BooksButtonAction(),
-            
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: width * .17),
+          child: CustomBookImage(),
+        ),
+        Text(
+          '''The Jungle Book''',
+          style: Styles.textStyle30.copyWith(fontFamily: kGtSectraFine),
+          maxLines: 2,
+        ),
+        SizedBox(height: 7),
+        Opacity(
+          opacity: .7,
+          child: Text('Rodyard Kipling', style: Styles.textStyle18),
+        ),
+        SizedBox(height: 10),
+        BookRating(mainAxisAlignment: MainAxisAlignment.center),
+        SizedBox(height: 10),
+        BooksButtonAction(),
       ],
     );
   }
