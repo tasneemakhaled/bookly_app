@@ -23,10 +23,10 @@ class BookDetailsViewBody extends StatelessWidget {
           hasScrollBody: false,
           child: Column(
           children: [
-          CustomBookDetailsAppBar(),
+        CustomBookDetailsAppBar(),
         BooksDetailsSection(),
-         Expanded(child: SizedBox(height: 30,)) ,  
-            SimilarBooksSection(),
+        Expanded(child: SizedBox(height: 30,)) ,  
+        SimilarBooksSection(),
         ],),)] 
       ),
     );
