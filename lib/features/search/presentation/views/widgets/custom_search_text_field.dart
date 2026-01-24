@@ -1,3 +1,4 @@
+import 'package:bookly_app/features/search/presentation/views/widgets/search_result_list_view.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchTextField extends StatelessWidget {
@@ -13,7 +14,9 @@ class CustomSearchTextField extends StatelessWidget {
           borderSide: BorderSide(color: Colors.white),
           borderRadius: BorderRadius.circular(16)),
         hintText: 'Search',
-        suffixIcon: IconButton(icon:Icon(Icons.search),onPressed: (){},),
+        suffixIcon: IconButton(icon:Icon(Icons.search),onPressed: (){
+            
+        },),
       ),
     );
   }
