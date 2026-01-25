@@ -4,5 +4,5 @@ import 'package:dartz/dartz.dart';
 
 abstract class HomeRepo{  // repository pattern  بحدد الميثودس اللي هتتنفذ ميهمنيش ازاي 
 Future<Either <Failures,List<BookModel>>>  fetchFaeturedBokks();
- Future <Either<Failures,List<BookModel>>>  fetchBestSellerBooks();
+ Future <Either<Failures,List<BookModel>>>  fetchNewestBooks();
 }
