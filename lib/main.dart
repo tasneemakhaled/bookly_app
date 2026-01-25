@@ -1,10 +1,12 @@
 import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:bookly_app/core/utils/constants.dart';
+import 'package:bookly_app/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(const BooklyApp());
 }
 
@@ -32,3 +34,4 @@ class BooklyApp extends StatelessWidget {
 // ]);
 
 // use get package (getx) for navigation
+// single tone pattern dependency injection get it package
