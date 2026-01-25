@@ -7,7 +7,7 @@ import 'package:get_it/get_it.dart';
 final getIt = GetIt.instance;
 void setupServiceLocator(){
     getIt.registerSingleton<ApiService>(ApiService(Dio()));
-    getIt.registerSingleton<HomrRepoImpl>(HomrRepoImpl(getIt.get<ApiService>()));
+    getIt.registerSingleton<HomeRepoImpl>(HomeRepoImpl(getIt.get<ApiService>()));
 }
 
 // تجنب اني اعمل نسخ كتير من نفس الكلاس وكمان اي تغيير يسمع معايا في كل حتة dependency injection singlr tone pattern
