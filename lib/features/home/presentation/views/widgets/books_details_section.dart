@@ -29,7 +29,7 @@ class BooksDetailsSection extends StatelessWidget {
           child: Text('Rodyard Kipling', style: Styles.textStyle18),
         ),
         SizedBox(height: 10),
-        BookRating(mainAxisAlignment: MainAxisAlignment.center),
+        // BookRating(mainAxisAlignment: MainAxisAlignment.center),
         SizedBox(height: 10),
         BooksButtonAction(),
       ],

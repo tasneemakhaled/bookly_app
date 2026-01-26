@@ -1,14 +1,16 @@
 import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bookly_app/core/utils/constants.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:go_router/go_router.dart';
 
 class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({super.key});
-
+  const BestSellerItem({super.key, required this.bookModel});
+final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -17,12 +19,16 @@ class BestSellerItem extends StatelessWidget {
           onTap: () {
             GoRouter.of(context).push(AppRouter.kBookDetails);
           },
-          child: SizedBox(
-            height: 200,
-            width: 120,
-            child: Image(image: AssetImage(AssetsData.testImage)),
+          child:
+            SizedBox(
+              height: 200,
+              width: 120,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: CachedNetworkImage(imageUrl: bookModel.volumeInfo.imageLinks.thumbnail))
+            ),
           ),
-        ),
+      
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,22 +36,22 @@ class BestSellerItem extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width * .5,
                 child: Text(
-                  '''Harry Potter and the Goblet of Fire''',
+                  bookModel.volumeInfo.title??'no title',
                   style: Styles.textStyle20.copyWith(fontFamily: kGtSectraFine),
                   maxLines: 2,
                 ),
               ),
-              Text('J.K. Rowling', style: Styles.textStyle14),
+              Text(bookModel.volumeInfo.title!, style: Styles.textStyle14),
               Row(
                 children: [
                   Text(
-                    '19.99 €',
+                    'Free',
                     style: Styles.textStyle20.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Spacer(),
-                  BookRating(),
+                  BookRating(rating: bookModel.volumeInfo.maturityRating,),
                 ],
               ),
             ],

@@ -11,7 +11,7 @@ class SearchResultListView extends StatelessWidget {
       // physics: NeverScrollableScrollPhysics(),
       itemCount: 10,
       itemBuilder: (context, index) {
-        return BestSellerItem();
+        // return BestSellerItem(bookModel: ,);
       },
     );
   }
